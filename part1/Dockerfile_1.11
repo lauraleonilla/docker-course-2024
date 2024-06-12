@@ -1,0 +1,17 @@
+FROM amazoncorretto:11
+
+WORKDIR /app
+
+COPY pom.xml .
+
+RUN yum update -y && yum install -y maven
+
+RUN mvn dependency:go-offline
+
+COPY src ./src
+
+RUN mvn clean package
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "target/docker-example-1.1.3.jar"]

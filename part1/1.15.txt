@@ -1,0 +1,3 @@
+Github repo with README (only the frontend is dockerized): https://github.com/lauraleonilla/record-store/
+
+Dockerhub repo: https://hub.docker.com/repository/docker/lauraleonilla/record-store/general
